@@ -10,7 +10,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-def search_linkedin_profiles(role, company, num_results = 300):
+def search_linkedin_profiles(role, company, num_results = 10):
     query = f"site:linkedin.com/in \"{role}\" \"{company}\""
     url = f"https://serpapi.com/search.json"
     params = {
