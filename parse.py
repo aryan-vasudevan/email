@@ -19,6 +19,4 @@ def parse_prompt(user_prompt):
             {"role": "user", "content": user_prompt}
         ]
     )
-    return eval(completion.choices[0].message.content)
-
-print(parse_prompt(input()))
+    return dict(eval(completion.choices[0].message.content))
